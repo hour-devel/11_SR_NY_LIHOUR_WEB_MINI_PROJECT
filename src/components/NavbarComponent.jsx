@@ -40,7 +40,7 @@ export default function NavbarComponent() {
 
             <div className="relative hidden md:block">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <Image
+                <Image alt=""
                   src="/assets/icons/search-icon.svg"
                   width={15}
                   height={15}
@@ -63,14 +63,14 @@ export default function NavbarComponent() {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              <Image
+              <Image alt=""
                 src="/assets/icons/search-icon.svg"
                 width={15}
                 height={15}
               />
             </button>
 
-            <Image
+            <Image alt=""
               src="/assets/icons/notification.svg"
               width={22}
               height={22}
@@ -86,7 +86,7 @@ export default function NavbarComponent() {
             >
               <span className="sr-only">Open user menu</span>
               <div className="relative w-10 h-10">
-                <Image
+                <Image alt=""
                   className="rounded-full"
                   src="https://i.pinimg.com/564x/66/57/c3/6657c31fa4c64e2e9c2f7f8667a85963.jpg"
                   fill
@@ -102,7 +102,7 @@ export default function NavbarComponent() {
           >
             <div className="relative mt-3 md:hidden">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <Image
+                <Image alt=""
                   src="/assets/icons/search-icon.svg"
                   width={15}
                   height={15}
@@ -118,18 +118,18 @@ export default function NavbarComponent() {
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-3xl bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
-                  href={pathname.replace('/todo-board/', '/todo-list/')}
+                  href={pathname.replace("/todo-board/", "/todo-list/")}
                   className={` flex gap-2 py-2 px-3 rounded md:bg-transparent md:p-0 md:dark:text-blue-500`}
                   aria-current="page"
                 >
                   {pathname === "/todo-list" ? (
-                    <Image
+                    <Image alt=""
                       src="/assets/icons/list-filled-blue.svg"
                       width={18}
                       height={18}
                     />
                   ) : (
-                    <Image
+                    <Image alt=""
                       src="/assets/icons/list.svg"
                       width={18}
                       height={18}
@@ -148,18 +148,18 @@ export default function NavbarComponent() {
 
               <li>
                 <Link
-                 href={pathname.replace('/todo-list/', '/todo-board/')}
+                  href={pathname.replace("/todo-list/", "/todo-board/")}
                   className=" flex gap-2 py-2 px-3 text-gray rounded md:bg-transparent  md:p-0 md:dark:text-blue-500"
                   aria-current="page"
                 >
                   {pathname === "/todo-board" ? (
-                    <Image
+                    <Image alt=""
                       src="/assets/icons/board-filled-blue.svg"
                       width={18}
                       height={18}
                     />
                   ) : (
-                    <Image
+                    <Image alt=""
                       src="/assets/icons/board.svg"
                       width={18}
                       height={18}
@@ -176,8 +176,14 @@ export default function NavbarComponent() {
                 </Link>
               </li>
             </ul>
-            
-            <div className={`${pathname === "/todo-list" ? "border-b-2 border-b-blue-700 absolute bottom-0 w-20 left-2" : "border-b-2 border-b-blue-700 absolute bottom-0 w-90 left-24"}`}></div>
+
+            <div
+              className={`${
+                pathname === "/todo-list"
+                  ? "border-b-2 border-b-blue-700 absolute bottom-0 w-20 left-2"
+                  : "border-b-2 border-b-blue-700 absolute bottom-0 w-90 left-24"
+              }`}
+            ></div>
           </div>
         </div>
       </div>
