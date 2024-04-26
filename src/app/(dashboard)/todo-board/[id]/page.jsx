@@ -30,10 +30,10 @@ const page = async ({ params }) => {
   return (
     <>
       <ListBoardComponentHeader
-        favorite = {workSpacePath.data}
+        favorite={workSpacePath.data}
         pathName={workSpacePath.data}
         workSpaceId={params.id}
-        path = "Board"
+        path="Board"
       />
       <div className="w-[100%] h-auto flex justify-between mt-[20px] mb-[100px]">
         <div className="w-[24%] h-auto">
@@ -82,7 +82,10 @@ const page = async ({ params }) => {
           </div>
         </div>
       </div>
-      <AddNewTaskComponent pathName={workSpacePath.data} workSpaceId={params.id}/>
+      <AddNewTaskComponent
+        pathName={workSpacePath.data}
+        workSpaceId={params.id}
+      />
     </>
   );
 };
